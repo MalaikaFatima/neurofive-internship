@@ -1,0 +1,172 @@
+/* ---- reset & base ---- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: #eef1f6;
+    font-family: 'Inter', sans-serif;
+    color: #24304a;
+    padding: 40px 20px 80px;
+  }
+  
+  .page-title {
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(20px, 4vw, 28px);
+    margin-bottom: 40px;
+  }
+  
+  .demo {
+    max-width: 960px;
+    margin: 0 auto 56px;
+  }
+  
+  .demo__label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #5b5fef;
+    margin-bottom: 12px;
+  }
+  
+  /* ---- shared pricing shell ---- */
+  .pricing {
+    background: #ffffff;
+    border: 1px solid #e3e7ee;
+    border-radius: 18px;
+    padding: 32px;
+    box-shadow: 0 12px 30px rgba(30, 41, 59, 0.08);
+  }
+  
+  .pricing__header {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  
+  .pricing__header h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 22px;
+    margin-bottom: 6px;
+  }
+  
+  .pricing__header p {
+    color: #5c6580;
+    font-size: 14px;
+  }
+  
+  .pricing__footer {
+    text-align: center;
+    margin-top: 28px;
+    padding-top: 16px;
+    border-top: 1px solid #eceff4;
+    font-size: 12.5px;
+    color: #7c88a1;
+  }
+  
+  /* =========================================================
+     VERSION 1 — FLEXBOX
+     ========================================================= */
+  .pricing__row--flex {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .pricing__row--flex .plan {
+    flex: 1 1 0;
+  }
+  
+  /* =========================================================
+     VERSION 2 — CSS GRID
+     ========================================================= */
+  .pricing__row--grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  /* =========================================================
+     SHARED PLAN CARD STYLING
+     ========================================================= */
+  .plan {
+    border: 1px solid #e3e7ee;
+    border-radius: 14px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .plan--highlight {
+    border-color: #5b5fef;
+    box-shadow: 0 0 0 3px rgba(91, 95, 239, 0.12);
+  }
+  
+  .plan h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .plan__price {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+  
+  .plan__price span {
+    font-size: 13px;
+    font-weight: 400;
+    color: #7c88a1;
+  }
+  
+  .plan ul {
+    list-style: none;
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+  
+  .plan li {
+    font-size: 13px;
+    color: #5c6580;
+    padding: 6px 0;
+    border-bottom: 1px solid #f1f3f8;
+  }
+  
+  .plan__btn {
+    display: inline-block;
+    background: #5b5fef;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 0;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+  }
+  
+  .plan__btn:hover {
+    background: #4548c9;
+  }
+  
+  /* =========================================================
+     RESPONSIVE — stack to 1 column below 600px
+     ========================================================= */
+  @media (max-width: 600px) {
+    .pricing__row--flex {
+      flex-direction: column;
+    }
+  
+    .pricing__row--grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .pricing {
+      padding: 22px;
+    }
+  }

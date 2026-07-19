@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox vs Grid — Pricing Playground</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<h1 class="page-title">Same layout, two ways: Flexbox vs Grid</h1>
+
+<!-- ===================== FLEXBOX VERSION ===================== -->
+<section class="demo">
+  <p class="demo__label">Version 1 — Flexbox</p>
+
+  <div class="pricing pricing--flex">
+    <header class="pricing__header">
+      <h2>Choose your plan</h2>
+      <p>Simple pricing, no surprises.</p>
+    </header>
+
+    <div class="pricing__row pricing__row--flex">
+      <article class="plan">
+        <h3>Basic</h3>
+        <p class="plan__price">Rs. 5<span>/mo</span></p>
+        <ul>
+          <li>1 project</li>
+          <li>Community support</li>
+          <li>Basic analytics</li>
+        </ul>
+        <a class="plan__btn" href="#">Choose Basic</a>
+      </article>
+
+      <article class="plan plan--highlight">
+        <h3>Pro</h3>
+        <p class="plan__price">Rs.15<span>/mo</span></p>
+        <ul>
+          <li>10 projects</li>
+          <li>Priority support</li>
+          <li>Advanced analytics</li>
+        </ul>
+        <a class="plan__btn" href="#">Choose Pro</a>
+      </article>
+
+      <article class="plan">
+        <h3>Premium</h3>
+        <p class="plan__price">Rs.30<span>/mo</span></p>
+        <ul>
+          <li>Unlimited projects</li>
+          <li>24/7 support</li>
+          <li>Custom reports</li>
+        </ul>
+        <a class="plan__btn" href="#">Choose Premium</a>
+      </article>
+    </div>
+
+    <footer class="pricing__footer">
+      <p>Cancel anytime. No hidden fees.</p>
+    </footer>
+  </div>
+</section>
+
+<!-- ===================== GRID VERSION ===================== -->
+<section class="demo">
+  <p class="demo__label">Version 2 — CSS Grid</p>
+
+  <div class="pricing pricing--grid">
+    <header class="pricing__header">
+      <h2>Choose your plan</h2>
+      <p>Simple pricing, no surprises.</p>
+    </header>
+
+    <div class="pricing__row pricing__row--grid">
+      <article class="plan">
+        <h3>Basic</h3>
+        <p class="plan__price">Rs.5<span>/mo</span></p>
+        <ul>
+          <li>1 project</li>
+          <li>Community support</li>
+          <li>Basic analytics</li>
+        </ul>
+        <a class="plan__btn" href="#">Choose Basic</a>
+      </article>
+
+      <article class="plan plan--highlight">
+        <h3>Pro</h3>
+        <p class="plan__price">Rs.15<span>/mo</span></p>
+        <ul>
+          <li>10 projects</li>
+          <li>Priority support</li>
+          <li>Advanced analytics</li>
+        </ul>
+        <a class="plan__btn" href="#">Choose Pro</a>
+      </article>
+
+      <article class="plan">
+        <h3>Premium</h3>
+        <p class="plan__price">Rs.30<span>/mo</span></p>
+        <ul>
+          <li>Unlimited projects</li>
+          <li>24/7 support</li>
+          <li>Custom reports</li>
+        </ul>
+        <a class="plan__btn" href="#">Choose Premium</a>
+      </article>
+    </div>
+
+    <footer class="pricing__footer">
+      <p>Cancel anytime. No hidden fees.</p>
+    </footer>
+  </div>
+</section>
+
+</body>
+</html>
