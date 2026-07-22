@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="app">
+
+  <header class="app__header">
+    <h1>Weather Dashboard</h1>
+    <p>Search any city for live conditions and a 3-day forecast</p>
+  </header>
+
+  <form id="search-form" class="search-box">
+    <input type="text" id="city" placeholder="Enter city name..." autocomplete="off">
+    <button type="submit">Search</button>
+  </form>
+
+  <!-- loading state -->
+  <div id="loading" class="state-message is-hidden">
+    <div class="spinner"></div>
+    <p>Fetching weather...</p>
+  </div>
+
+  <!-- error state -->
+  <div id="error" class="state-message state-message--error is-hidden">
+    <p id="error-text">Something went wrong.</p>
+  </div>
+
+  <!-- current weather -->
+  <section id="current-weather" class="current-weather is-hidden">
+    <h2 id="current-city"></h2>
+    <p class="current-weather__icon" id="current-icon"></p>
+    <p class="current-weather__temp"><span id="current-temp"></span>°C</p>
+    <p class="current-weather__condition" id="current-condition"></p>
+  </section>
+
+  <!-- 3-day forecast -->
+  <section id="forecast" class="forecast is-hidden"></section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
