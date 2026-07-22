@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 60px 20px;
+  font-family: 'Inter', sans-serif;
+  color: #24304a;
+  background-color: #eef1f6;
+  background-image:
+    linear-gradient(rgba(91, 95, 239, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(91, 95, 239, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.app {
+  width: 100%;
+  max-width: 440px;
+  background: #ffffff;
+  border: 1px solid #e3e7ee;
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 20px 45px rgba(30, 41, 59, 0.12), 0 2px 6px rgba(30, 41, 59, 0.06);
+}
+
+/* ---- header ---- */
+.app__header {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px dashed #dfe3ec;
+}
+
+.app__header h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 24px;
+  background: linear-gradient(90deg, #24304a, #5b5fef);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.app__counter {
+  margin-top: 6px;
+  font-size: 12.5px;
+  font-family: 'Inter', monospace;
+  color: #5b5fef;
+  font-weight: 600;
+}
+
+/* ---- form ---- */
+.task-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.task-form__input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #e3e7ee;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #24304a;
+  background: #f9fafc;
+}
+
+.task-form__input:focus {
+  outline: none;
+  border-color: #5b5fef;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(91, 95, 239, 0.14);
+}
+
+.task-form__btn {
+  background: linear-gradient(135deg, #6a6ef5, #5b5fef);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(91, 95, 239, 0.3);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.task-form__btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(91, 95, 239, 0.38);
+}
+
+/* ---- filters ---- */
+.filters {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+  background: #f5f6fb;
+  padding: 4px;
+  border-radius: 12px;
+  border: 1px solid #eceff4;
+}
+
+.filter-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #5c6580;
+  font-size: 12.5px;
+  font-weight: 500;
+  padding: 7px 0;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.filter-btn:hover {
+  color: #5b5fef;
+}
+
+.filter-btn.is-active {
+  background: #ffffff;
+  color: #5b5fef;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(30, 41, 59, 0.08);
+}
+
+/* ---- task list ---- */
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 12px;
+  border: 1px solid #eceff4;
+  border-left: 3px solid #5b5fef;
+  border-radius: 10px;
+  background: #f9fafc;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.task:hover {
+  background: #f2f4fb;
+}
+
+.task.is-completed {
+  border-left-color: #b7c0d1;
+  background: #f5f6f9;
+}
+
+.task__checkbox {
+  width: 17px;
+  height: 17px;
+  accent-color: #5b5fef;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.task__text {
+  flex: 1;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.task.is-completed .task__text {
+  text-decoration: line-through;
+  color: #9aa3b8;
+}
+
+.task__delete {
+  background: none;
+  border: none;
+  color: #c3cad9;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.task__delete:hover {
+  color: #e15b5b;
+  background: rgba(225, 91, 91, 0.1);
+}
+
+/* ---- empty state ---- */
+.empty-state {
+  text-align: center;
+  font-size: 13px;
+  color: #9aa3b8;
+  padding: 24px 0 4px;
+  font-family: 'Inter', monospace;
+}
+
+.empty-state.is-hidden {
+  display: none;
+}
+
+/* ---- responsive ---- */
+@media (max-width: 380px) {
+  .app {
+    padding: 24px 20px;
+  }
+}
