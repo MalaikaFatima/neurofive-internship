@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="app">
+
+  <header class="app__header">
+    <h1>Notes</h1>
+    <input type="text" id="search" class="search" placeholder="Search notes...">
+  </header>
+
+  <form id="note-form" class="note-form" novalidate>
+    <input type="text" id="title" class="note-form__title" placeholder="Title">
+    <span class="error" id="title-error"></span>
+
+    <textarea id="content" class="note-form__content" placeholder="Write something..." rows="3"></textarea>
+    <span class="error" id="content-error"></span>
+
+    <div class="note-form__actions">
+      <button type="submit" id="submit-btn">Add note</button>
+      <button type="button" id="cancel-edit" class="cancel-btn is-hidden">Cancel</button>
+    </div>
+    <input type="hidden" id="edit-id">
+  </form>
+
+  <div id="notes-grid" class="notes-grid"></div>
+
+  <p id="empty-state" class="empty-state">write your first one.</p>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
