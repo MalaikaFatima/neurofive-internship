@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #24304a;
+  background: #eef1f6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  color: inherit;
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+#navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e3e7ee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.navbar__brand {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  text-decoration: none;
+  color: #1a2138;
+}
+
+.navbar__toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #24304a;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 26px;
+}
+
+.navbar__link {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5c6580;
+  transition: color 0.2s ease;
+}
+
+.navbar__link:hover {
+  color: #5b5fef;
+}
+
+.navbar__link.is-active {
+  color: #5b5fef;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .navbar__toggle {
+    display: block;
+  }
+
+  .navbar__links {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border-bottom: 1px solid #e3e7ee;
+    padding: 12px 24px 18px;
+  }
+
+  .navbar__links.is-open {
+    display: flex;
+  }
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+#footer {
+  background: #ffffff;
+  border-top: 1px solid #e3e7ee;
+  margin-top: 60px;
+}
+
+.footer__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 13px;
+  color: #7c88a1;
+}
+
+.footer__links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer__links a {
+  text-decoration: none;
+  color: #5c6580;
+  transition: color 0.2s ease;
+}
+
+.footer__links a:hover {
+  color: #5b5fef;
+}
+
+/* =========================================================
+   SHARED LAYOUT HELPERS
+   ========================================================= */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14.5px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6a6ef5, #5b5fef);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(91, 95, 239, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(91, 95, 239, 0.32);
+}

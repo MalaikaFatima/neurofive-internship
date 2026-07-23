@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Malaika Fatima</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="contact.css">
+</head>
+<body data-page="contact">
+
+<nav id="navbar"></nav>
+
+<main>
+  <section class="container contact">
+    <h1 class="page-title">Get in touch</h1>
+    <p class="page-subtitle">Have a project in mind? Send a message below.</p>
+
+    <form id="contact-form" class="contact-form" novalidate>
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Your name">
+      <span class="error" id="name-error"></span>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="you@example.com">
+      <span class="error" id="email-error"></span>
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" placeholder="What would you like to say?"></textarea>
+      <span class="error" id="message-error"></span>
+
+      <button type="submit" class="btn">Send message</button>
+      <p class="success-message is-hidden" id="success-message">
+        Thanks! Your message has been noted — I'll get back to you soon.
+      </p>
+    </form>
+  </section>
+</main>
+
+<footer id="footer"></footer>
+
+<script src="contact.js"></script>
+<script src="shared.js"></script>
+</body>
+</html>
